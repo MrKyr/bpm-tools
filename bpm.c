@@ -198,7 +198,7 @@ int main(int argc, char *argv[])
 	size_t len = 0, buf = 0;
 	off_t n = 0;
 	double bpm, min = LOWER, max = UPPER, v = 0.0;
-	const char *format = "%0.3f";
+	const char *format = "%0.0f";
 	FILE *fdiff = NULL, *fnrg = NULL;
 
 	for (;;) {
