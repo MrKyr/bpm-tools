@@ -22,5 +22,8 @@ class BpmTools < Formula
     bin.install "bpm"
     bin.install "bpm-graph" if build.with? "bpm-graph"
     bin.install "bpm-tag" if build.with? "bpm-tag"
+    man1.install "bpm.1"
+    man1.install "bpm-graph.1" if build.with? "bpm-graph"
+    man1.install "bpm-tag.1" if build.with? "bpm-tag"
   end
 end
