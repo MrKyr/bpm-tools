@@ -42,3 +42,12 @@ __END__
  	;;
  *.ogg)
  	BPM=`vorbiscomment "$FILE" | sed -n 's/^BPM=//p'`
+@@ -109,7 +109,7 @@ fi
+ 
+ # Analyse the BPM
+ 
+-BPM=`sox -V1 "$FILE" -r 44100 -e float -c 1 -t raw - | bpm $ARGS`
++BPM=`sox -V1 "$FILE" -r 44100 -e float -c 1 -t raw - | bpm -f "%.0f" $ARGS`
+ if [ -z "$BPM" ]; then
+ 	exit 1
+ fi
