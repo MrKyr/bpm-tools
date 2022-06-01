@@ -20,9 +20,9 @@ clean:
 
 install:
 	$(INSTALL) -d $(DESTDIR)$(BINDIR)
-	$(INSTALL) -t $(DESTDIR)$(BINDIR) bpm bpm-graph bpm-tag
+	$(INSTALL) -c bpm bpm-graph bpm-tag $(DESTDIR)$(BINDIR)
 	$(INSTALL) -d $(DESTDIR)$(MANDIR)/man1
-	$(INSTALL) -t $(DESTDIR)$(MANDIR)/man1 bpm.1 bpm-graph.1 bpm-tag.1
+	$(INSTALL) -c bpm.1 bpm-graph.1 bpm-tag.1 $(DESTDIR)$(MANDIR)/man1
 
 dist:
 	mkdir -p dist
